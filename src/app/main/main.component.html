@@ -1,0 +1,77 @@
+<div class="div1">
+    <i class="fa fa-bars fa-3x" style="margin-left: 20px;margin-top:5px">
+       <h3 class="dataPeaceSetting">Data Peace</h3>
+    </i>
+ </div>
+ <mat-form-field style="margin-left:25px">
+    <input  matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter ">
+ </mat-form-field>
+ <table mat-table [dataSource]="dataSource" matSort >
+    
+  <!-- First Name Column  -->
+    <ng-container matColumnDef="first_name" >
+       <th mat-header-cell *matHeaderCellDef mat-sort-header><h2>First Name</h2> </th>
+       <td mat-cell *matCellDef="let element" (click)="showID(element.id)"> 
+       {{element.first_name}} </td>
+    </ng-container>
+    
+    <!-- Last Name Column -->
+    <ng-container matColumnDef="last_name">
+       <th mat-header-cell *matHeaderCellDef mat-sort-header> <h2>Last Name</h2> </th>
+       <td mat-cell *matCellDef="let element" (click)="showID(element.id)">
+       {{element.last_name}} </td>
+    </ng-container>
+    
+    <!-- Company Name Column -->
+    <ng-container matColumnDef="company_name">
+       <th mat-header-cell *matHeaderCellDef mat-sort-header> <h2>Company Name</h2> </th>
+       <td mat-cell *matCellDef="let element" (click)="showID(element.id)"> 
+       {{element.company_name}} </td>
+    </ng-container>
+    
+    <!-- City Column -->
+    <ng-container matColumnDef="city">
+       <th mat-header-cell *matHeaderCellDef mat-sort-header> <h2>City</h2> </th>
+       <td mat-cell *matCellDef="let element" (click)="showID(element.id)"> 
+       {{element.city}} </td>
+    </ng-container>
+    
+    <!-- State Column  -->
+    <ng-container matColumnDef="state">
+       <th mat-header-cell *matHeaderCellDef mat-sort-header> <h2>State</h2> </th>
+       <td mat-cell *matCellDef="let element" (click)="showID(element.id)"> 
+       {{element.state}} </td>
+    </ng-container>
+    
+    <!-- ZIP Column  -->
+    <ng-container matColumnDef="zip">
+       <th mat-header-cell *matHeaderCellDef mat-sort-header> <h2>ZIP</h2> </th>
+       <td mat-cell *matCellDef="let element" (click)="showID(element.id)"> 
+       {{element.zip}} </td>
+    </ng-container>
+   
+    <!-- Email Column  -->
+    <ng-container matColumnDef="email">
+       <th mat-header-cell *matHeaderCellDef mat-sort-header> <h2>Email</h2> </th>
+       <td mat-cell *matCellDef="let element" (click)="showID(element.id)"> 
+       {{element.email}} </td>
+    </ng-container>
+    
+    <!-- Web Column  -->
+    <ng-container matColumnDef="web">
+       <th mat-header-cell *matHeaderCellDef mat-sort-header> <h2>Web</h2> </th>
+       <td mat-cell *matCellDef="let element" (click)="showID(element.id)"> 
+       {{element.web}} </td>
+    </ng-container>
+    
+    <!-- Age Column  -->
+    <ng-container matColumnDef="age">
+       <th mat-header-cell *matHeaderCellDef mat-sort-header> <h2>Age</h2> </th>
+       <td mat-cell *matCellDef="let element" (click)="showID(element.id)"> 
+       {{element.age}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+ </table>
+ <mat-paginator [pageSizeOptions]="[5, 10, 20, 50, 100]" showFirstLastButtons></mat-paginator>

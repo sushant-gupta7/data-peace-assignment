@@ -1,0 +1,25 @@
+.div1 {
+    width: 100% auto;
+    height: 65px;
+    background: #2B95F3;
+  }
+  .aligntext{
+    margin-left: 1300px;
+    margin-top: -15px
+  }
+  .div2{
+    margin-left: 30px
+  }
+  .div3{
+    margin-top: 50px
+  }
+  .heading{
+    margin-top: 50px
+  }
+  p{
+    color: #A5A3B4
+  }
+  .dataPeaceSetting{
+    margin-top: -50px;
+    margin-left: 70px
+}
